@@ -1,0 +1,62 @@
+<section class="container bg-white my-2">
+  <article class="row">
+    <div class="col-3">
+      {{#if user}}
+      <span class="editIcon">
+         <a href="/employee/edit-emp/{{payload._id}}">
+         <img
+            src="/images/5996860.png"
+            alt=""
+            title="Edit profile"
+          /></a>
+      </span> 
+      {{else}}
+      {{/if}}
+
+      <figure class="my-2 p-2">
+        <img
+          class="img-thumbnail p-2"
+          src="{{trimString payload.emp_photo.0.path}}"
+          alt="{{payload.emp_name}}"
+        />
+      </figure>
+      <h2
+        class="h2 text-uppercase font-weight-bold text-success"
+      >{{payload.emp_name}}</h2>
+      <p>{{payload.emp_id}}</p>
+      <p>Designation : {{payload.emp_des}}</p>
+    </div>
+
+    <div class="col-9 bg-white my-2 p-2 container-fluid">
+      <main>
+        <h2
+          class="text-uppercase border-bottom font-weight-bold text-success text-dark p-2 container-fluid ml-2"
+        >Name :
+          {{payload.emp_name}}
+        </h2>
+
+        {{#if user}}
+        <form
+          class="float-right text-danger"
+          method="post"
+          action="/employee/delete-emp/{{payload._id}}?_method=DELETE"
+        >
+        
+          <input type="hidden" name="_method" value="DELETE" />
+          <button class="btn btn-danger">delete</button>
+        </form>
+         {{else}}
+        {{/if}}
+        
+        <p>Designation : {{payload.emp_des}}</p>
+        <p>Skills : {{payload.emp_skills}}</p>
+        <p>Experience : {{payload.emp_exp}}</p>
+        <p>Mobile : {{payload.emp_phone}}</p>
+        <p>Salary : {{payload.emp_salary}}</p>
+        <p>Education : {{payload.emp_edu}}</p>
+        <p>Location : {{payload.emp_loc}}</p>
+        <p>Gender : {{payload.emp_gen}}</p>
+      </main>
+    </div>
+  </article>
+</section>

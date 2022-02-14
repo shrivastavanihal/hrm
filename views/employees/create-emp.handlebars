@@ -1,0 +1,171 @@
+<section class="container bg-white my-4 border-primary">
+  <article>
+    <div class="row">
+      <main class="empBlock">
+        <h2 class="h2 text-uppercase py-3 font-weidth-bolt text-success">CREATE
+          EMPLOYEE</h2>
+        <form
+          action="/employee/create-emp"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <div class="row">
+            {{! 1.name }}
+            <div class="col-3 form-group">
+              <lable>Name</lable>
+              <input
+                type="text"
+                class="form-control"
+                name="emp_name"
+                id="emp_name"
+                placeholder="enter employee name"
+                required
+              />
+            </div>
+            {{! 2.ID }}
+            <div class="col-3 form-group">
+              <lable>ID</lable>
+              <input
+                type="text"
+                name="emp_id"
+                id="emp_id"
+                placeholder=" enter emp id"
+                class="form-control"
+                required
+              />
+            </div>
+            {{! 3.salary }}
+            <div class="col-3 form-group">
+              <lable>Salary</lable>
+              <input
+                type="text"
+                class="form-control"
+                id="emp_salary"
+                name="emp_salary"
+                placeholder="emp_salary"
+                required
+              />
+            </div>
+            {{! 4.Education }}
+            <div class="col-3 form-group">
+              <lable>Education</lable>
+              <select name="emp_edu" id="emp_edu">
+                <option value="BCA">BCA</option>
+                <option value="MCA">MCA</option>
+                <option value="BE">BE</option>
+                <option value="BTech">BTech</option>
+              </select>
+            </div>
+            {{! 5.Experince }}
+            <div class="col-3 form-group">
+              <lable>Experience</lable>
+              <input
+                type="text"
+                class="form-control"
+                name="emp_exp"
+                id="emp_exp"
+                placeholder=" enter emp_experiance"
+                required
+              />
+            </div>
+            {{! 6.EMAIL }}
+            <div class="col-3 form-group">
+              <lable>Email</lable>
+              <input
+                type="email"
+                class="form-control"
+                name="emp_email"
+                id="emp_email"
+                placeholder=" enter email"
+                required
+              />
+            </div>
+            {{! 7.phone }}
+            <div class="col-3 form-group">
+              <lable>Phone</lable>
+              <input
+                type="number"
+                class="form-control"
+                name="emp_phone"
+                id="emp_phone"
+                placeholder=" enter mobile number"
+                required
+              />
+            </div>
+            {{! 8. gender }}
+            <div class="col-3 form-group">
+              <lable for="emp_gen">Gender</lable>
+              <input
+                type="radio"
+                name="emp_gen"
+                class="form-check-input1"
+                id="emp_gen"
+                value="male"
+              />
+              Male
+              <input
+                type="radio"
+                name="emp_gen"
+                class="form-check-input1"
+                id="emp_gen"
+                value="female"
+              />
+              Female
+
+            </div>
+            {{! 9. Designation }}
+            <div class="col-3 form-group">
+              <lable>Designation</lable>
+              <input
+                type="text"
+                class="form-control"
+                name="emp_des"
+                id="emp_des"
+                placeholder=" enter designation"
+                required
+              />
+            </div>
+            {{! 10. skills }}
+            <div class="col-3 form-group">
+              <lable for="emp_skills">skills</lable>
+              <div>
+                <input
+                  type="checkbox"
+                  name="emp_skills"
+                  value="javascript"
+                  checked
+                />JavaScript
+                <input type="checkbox" name="emp_skills" value="CSS" />CSS
+                <input type="checkbox" name="emp_skills" value="HTML" />HTML
+                <input type="checkbox" name="emp_skills" value="Python" />Python
+              </div>
+            </div>
+            {{! 11. Location }}
+            <div class="col-3 form-group">
+              <lable>Location</lable>
+              <input
+                type="text"
+                class="form-control"
+                name="emp_loc"
+                id="emp_loc"
+                placeholder=" enter location"
+                required
+              />
+            </div>
+            {{! 12. photo}}
+            <div class="col-3 form-group">
+              <lable>Upload Photo</lable>
+              <input type="file" class="" name="emp_photo" id="emp_photo" />
+            </div>
+            <br />
+            <br />
+
+          </div>
+          <div class=" form-group">
+            <button type="submit" class="btn btn-success">Submit</button>
+          </div>
+        </form>
+      </main>
+    </div>
+  </article>
+</section>
